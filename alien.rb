@@ -5,23 +5,23 @@
 class Alien < Formula
   desc "Quick command-line aliases driven by your shell history"
   homepage "https://gitlab.com/nickdonnelly/alien"
-  version "0.0.14"
+  version "0.0.15"
   license "MIT"
 
   depends_on "fzf" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.14/alien_0.0.14_darwin_amd64.tar.gz"
-      sha256 "03b12b98bb95c45753eead88251ebfa361c2935280de96fb12cde3b88eb4e981"
+      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.15/alien_0.0.15_darwin_amd64.tar.gz"
+      sha256 "9e5c280dfaa4def37506ad0dfa8dc9fd80958f630b207fedd1d1927fd9588dc6"
 
       define_method(:install) do
         bin.install "alien"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.14/alien_0.0.14_darwin_arm64.tar.gz"
-      sha256 "a4720480877d3cc31f03ac9438609e56f14644e581d9c8d80b715914329739e5"
+      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.15/alien_0.0.15_darwin_arm64.tar.gz"
+      sha256 "047c197ea5d0f965796878ef2f3351eeaf8254a3e892e5ea2553336c9f6a2215"
 
       define_method(:install) do
         bin.install "alien"
@@ -31,15 +31,15 @@ class Alien < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.14/alien_0.0.14_linux_amd64.tar.gz"
-      sha256 "987bb48d82531214f37d2b90269a01a2bf0daa461461e7558dc8d3987851718c"
+      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.15/alien_0.0.15_linux_amd64.tar.gz"
+      sha256 "df053737850544456de5f170c4285c5bbcc903be17173df93e034cddc29d9e78"
       define_method(:install) do
         bin.install "alien"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.14/alien_0.0.14_linux_arm64.tar.gz"
-      sha256 "249e2dacb68a61f09429892f83e4cdd038337dcc2c392c7700729310a0f967cb"
+      url "https://github.com/nickdonnelly/alien/releases/download/v0.0.15/alien_0.0.15_linux_arm64.tar.gz"
+      sha256 "91f2ff3f87758db893e00403a60fd620b91da0cacd310220d9953f5e903ac176"
       define_method(:install) do
         bin.install "alien"
       end
